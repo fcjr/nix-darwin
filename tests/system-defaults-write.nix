@@ -51,7 +51,16 @@
   system.defaults.dock.autohide-delay = 0.24;
   system.defaults.dock.orientation = "left";
   system.defaults.dock.persistent-apps = ["MyApp.app" "Cool.app"];
-  system.defaults.dock.persistent-others = ["~/Documents" "~/Downloads/file.txt"];
+  system.defaults.dock.persistent-others = [
+    "~/Documents"
+    "~/Downloads/file.txt"
+    {
+      path = "~/Appications";
+      displayas = "folder";
+      showas = "fan";
+      arrangement = "date-modified";
+    }
+  ];
   system.defaults.dock.scroll-to-open = false;
   system.defaults.finder.AppleShowAllFiles = true;
   system.defaults.finder.ShowStatusBar = true;
