@@ -80,7 +80,16 @@
     { folder = "/Applications/Utilities"; }
     { file = "/Users/example/Downloads/test.csv"; }
   ];
-  system.defaults.dock.persistent-others = ["~/Documents" "~/Downloads/file.txt"];
+  system.defaults.dock.persistent-others = [
+    "~/Documents"
+    "~/Downloads/file.txt"
+    {
+      path = "~/Appications";
+      displayas = "folder";
+      showas = "fan";
+      arrangement = "date-modified";
+    }
+  ];
   system.defaults.dock.scroll-to-open = false;
   system.defaults.finder.AppleShowAllFiles = true;
   system.defaults.finder.ShowStatusBar = true;
